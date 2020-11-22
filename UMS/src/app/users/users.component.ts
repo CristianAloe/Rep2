@@ -10,5 +10,6 @@ import {Component} from '@angular/core';
 })
 
 export class UsersComponent{  //14.2) Per Creare il componente manualmente, creo la classe UsersComponent,  14.3)e dichiaro  questa classe in app.module.ts, 14.4)di conseguenza richiamo il @Component,
-
+    title = 'Users' //15.1 Valore in input che deve essere inserito users.component.html con la forma {{title}}
+    
 }
