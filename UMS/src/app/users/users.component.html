@@ -7,6 +7,18 @@
             <th>Email</th>
             <th>Telefono</th>
             <th>Provincia</th>
+            <th>Anni</th>
+
+        </tr>
+        <!--15.3 Usiamo la direttiva *ngFor per scorrere l'array "users" presente in users.component.ts-->
+        <tr *ngFor = "let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.fiscalcode}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.province}}</td>
+            <td>{{user.age}}</td>
         </tr>
     
 </table>
