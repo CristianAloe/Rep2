@@ -11,8 +11,8 @@
 
         </tr>
         <!--15.3 Usiamo la direttiva *ngFor per scorrere l'array "users" presente in users.component.ts-->
-        <tr *ngFor = "let user of users"> <!--Cr: scorri l'array users e prendi ogni oggetto user-->
-           <app-user [user-data] = "user"></app-user> <!--20.3) qui stiamo passando la variabile user  al componente figlio app-user e il suo valore sarà dato dall'oggetto "user" (vedi quello tra virgolette in rosso). Ma questa variabile user, per poter essere usata nel componente app-user, deve essere dichiarata in user.component.ts. 20.5) Quindi se utilizziamo l'alias "user-data" allora la variabile deve essere anche qui chiamata user-data--> 
+        <tr app-user *ngFor = "let user of users" [user-data] = "user"> 
+          
         </tr>
     
 </table>

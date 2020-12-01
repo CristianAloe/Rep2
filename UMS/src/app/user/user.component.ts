@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-user',
+  selector: 'tr[app-user]', //20.7) significa seleziona un elemento tr però che abbia un attributo app-user
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
