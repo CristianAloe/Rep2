@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { Template } from '@angular/compiler/src/render3/r3_ast';
 
 import {Component} from '@angular/core';
@@ -11,35 +12,8 @@ import {Component} from '@angular/core';
 
 export class UsersComponent{  //14.2) Per Creare il componente manualmente, creo la classe UsersComponent,  14.3)e dichiaro  questa classe in app.module.ts, 14.4)di conseguenza richiamo il @Component,
     title = 'Users' //15.1 Valore in input che deve essere inserito users.component.html con la forma {{title}}
-    users = [ //15.2)Adesso proviamo ad inserire un array di dati che faremo ciclare in users.component.html
-        {
-            name : 'Cristian1',
-            lastname: 'Gio1',
-            email: 'cris@gmail.com',
-            fiscalcode: 'ASDFGHJKLQ4345',
-            province: 'Torino',
-            phone: '432432532452',
-            age: 43
-
-        },
-        {
-            name : 'Cristian2',
-            lastname: 'Gio2',
-            email: 'cris@gmail.com',
-            fiscalcode: 'ASDFGHJKLQ4345',
-            province: 'Torino',
-            phone: '432432532452',
-            age: 43
-        },
-        {
-            name : 'Cristian3',
-            lastname: 'Gio3',
-            email: 'cris@gmail.com',
-            fiscalcode: 'ASDFGHJKLQ4345',
-            province: 'Torino',
-            phone: '432432532452',
-            age: 43
+    users = [];//15.2)Adesso proviamo ad inserire un array di dati che faremo ciclare in users.component.html
+    constructor(service: UserService){ //17.4 Dipendency Injection: Angular va ad instanziare automaticamente la classe UserService dal costruttore di users.component.ts
+            this.users = service.getUsers();
         }
-
-    ]
 }
