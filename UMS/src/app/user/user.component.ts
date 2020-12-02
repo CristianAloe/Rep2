@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'tr[app-user]', //20.7) significa seleziona un elemento tr però che abbia un attributo app-user
+  selector: 'tr[app-user]', 
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
@@ -11,7 +11,9 @@ export class UserComponent implements OnInit { //19.1 è stato creato questo com
 
   ngOnInit() {
   }
-
+  deleteUser(){ //21.4) metto questo evento deleteUser() in user.component.ts
+    alert(this.user.lastname)
+  }
 }
 
 

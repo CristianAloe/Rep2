@@ -5,3 +5,12 @@ td {  /*20.8 Mettiamo un pò di css in user.component.css ovvero al figlio */
     color: red;
 }
 
+button{
+    padding: 5px;
+    border: 1px solid #222;
+    width: 80px;
+}
+button.delete{
+    background: #fff;
+    color:red;
+}

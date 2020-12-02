@@ -8,10 +8,10 @@
             <th>Telefono</th>
             <th>Provincia</th>
             <th>Anni</th>
-
+            <th>Actions</th> <!-- 21.1 Aggiungo questo campo Action--> 
         </tr>
         <!--15.3 Usiamo la direttiva *ngFor per scorrere l'array "users" presente in users.component.ts-->
-        <tr app-user *ngFor = "let user of users" [user-data] = "user"> 
+        <tr app-user *ngFor = "let user of users" [user-data] = "user"> <!--20.6 Quindi mettiamo l'attributo app-user nell'elemento tr e alla variabiel [user-data] verrà attribuito il valore "user" (in rosso) proveninente dall'array--> 
           
         </tr>
     
