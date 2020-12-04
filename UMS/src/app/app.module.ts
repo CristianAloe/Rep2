@@ -1,4 +1,4 @@
-import { UserService } from './users/user.service'; //17.6) e così l’editor dovrà in modo automatico importare UserService da ./users/user.service
+import { UserService } from './services/user.service'; //17.6) e così l’editor dovrà in modo automatico importare UserService da ./users/user.service
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
