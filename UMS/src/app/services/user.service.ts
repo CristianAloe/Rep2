@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/user'; //23.1Creaiamo una cartella service e dentro ci metto il file del service
+import { User } from '../classes/user'; //23.1Creaiamo una cartella service e dentro ci metto il file del service
 
 @Injectable() //17.7 per dire ad Anular che questo servizio ha delle dipendenze  e che questo servizio verrà iniettato e dovrà risolvere tutte le dipendenze di questo servizo noi possiamo mettere un decoratore che si chiama @Injectable() 
 export class UserService { //17.1 creo questa classe UserService
                            //17.3 Andrà a richiamare questa classe con la DI in users.component.ts
 
     users: User[] = [ //23.4Torniamo su users.service.ts . Come possiamo dire che questa variabile deve essere un Array di user?
-        {             
+        {    
+            id: 1,         
             name : 'Cristian1',
             lastname: 'Gio1',
             email: 'cris@gmail.com',
@@ -17,6 +18,7 @@ export class UserService { //17.1 creo questa classe UserService
 
         },
         {
+            id: 2,
             name : 'Cristian2',
             lastname: 'Gio2',
             email: 'cris@gmail.com',
@@ -26,6 +28,7 @@ export class UserService { //17.1 creo questa classe UserService
             age: 43
         },
         {
+            id: 3,
             name : 'Cristian3',
             lastname: 'Gio3',
             email: 'cris@gmail.com',

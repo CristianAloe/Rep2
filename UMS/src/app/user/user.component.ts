@@ -1,5 +1,5 @@
 import { Component, EventEmitter,Input, OnInit, Output } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/user';
 import { UserService } from '../services/user.service';//23.1 possiamo fare possiamo creare una cartella che si chiami Services è spostiamo questo file user.service.ts
 //23.2 Veidiamo che c’è stato che il riferimento dell’import è cambiato in user.component.ts
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/user';
 
 @Component({
   selector: 'app-user-detail',
@@ -11,6 +11,10 @@ export class UserDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  saveUser(){
+    alert(this.user.id)
   }
 
 }

@@ -1,4 +1,4 @@
-import { User } from './interfaces/user';
+import { User } from './classes/user';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userSelected: User
+  showForm: boolean = false;
+  userSelected: User = new User();
      updateUser(user: User){
+          this .showForm = true;
        this.userSelected = user;
      }
 }

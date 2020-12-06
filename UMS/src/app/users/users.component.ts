@@ -2,7 +2,7 @@ import { UserService } from '../services/user.service';
 import { Template } from '@angular/compiler/src/render3/r3_ast';
 
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/user';
 
 @Component({  //14.5)per mettere questo è necessario l'import del component
     selector: 'app-users', //14.6)richiamo questo componente  in app-component.html
@@ -30,7 +30,7 @@ export class UsersComponent implements OnInit{  //14.2) Per Creare il componente
     }
 
     onSelectUser(user: User){
-        
-        this.updateUser.emit(user)
+        const userCopy = Object.assign({}, user);
+        this.updateUser.emit(userCopy)
     }
 }
