@@ -5,7 +5,7 @@
    </div>
    <div class="userDetail" *ngIf="userSelected"> <!--// 24.1Andiamo su app.component.html e mettiamo alcune class per i css e aggiungiamo anche userDetail-->
                                                  <!--abbiamo visto che lo userdetails si troverà direttamente nell ‘app.component.html. E vediamo che abbiamo la app-user-detail e la app-users. -->
-    <app-user-detail class="userDetail">       
+    <app-user-detail [user] = "userSelected">       
    </app-user-detail>
    </div>
-   
+
