@@ -11,6 +11,15 @@ button{
     width: 80px;
 }
 button.delete{
-    background: #fff;
-    color:red;
+    color:#fff;
+    background: red;
+    
+}
+button.edit{
+    color: #fff;
+    background: blue;
+}
+button.update{
+    color: #fff;
+    background: green;
 }

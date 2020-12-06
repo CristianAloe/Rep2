@@ -1,16 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 .main{
-    width: 90%;
+    width: 99%;
     margin: auto;
     vertical-align: top;
 }
 .users{
     float: left;
     width: 60%;
+    border: 1px solid yellow;
 }
 .userDetail{ /* //24.2 Mettiamo il css nel css generale dell’app in styles.css*/ /*24.5 Modifichiamo di nuovo il css*/
+    border: 1px solid red;
     float: left;
-    width: 40%;
+    width: 35%;
 }
 .btn-save{
     background-color: green;
