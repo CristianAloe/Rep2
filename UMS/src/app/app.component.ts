@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showForm: boolean = false;
+  showForm = false; // già è di default boolean
   userSelected: User = new User();
+  
      updateUser(user: User){
           this .showForm = true;
        this.userSelected = user;
