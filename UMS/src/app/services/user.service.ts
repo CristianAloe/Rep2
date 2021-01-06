@@ -1,6 +1,5 @@
 import { User } from './../classes/user';
 import { Injectable } from '@angular/core';
-import { User } from '../classes/user'; //23.1Creaiamo una cartella service e dentro ci metto il file del service
 import { UserInterface } from '../interfaces/user';
 
 @Injectable() //17.7 per dire ad Anular che questo servizio ha delle dipendenze  e che questo servizio verrà iniettato e dovrà risolvere tutte le dipendenze di questo servizo noi possiamo mettere un decoratore che si chiama @Injectable() 
@@ -63,4 +62,8 @@ export class UserService { //17.1 creo questa classe UserService
             this.users[idx] = user;
         }
     }
+    createUser(user: UserInterface){
+      
+            this.users.splice(0, 0, user)
+        }
 }

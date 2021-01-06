@@ -9,9 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   showForm = false; // già è di default boolean
   userSelected: User = new User();
-  
+
      updateUser(user: User){
           this .showForm = true;
        this.userSelected = user;
+     }
+     newUser(){
+       this.userSelected = new User();
+       this.showForm = true
      }
 }
