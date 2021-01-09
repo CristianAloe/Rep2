@@ -1,12 +1,14 @@
 <h1>User Magement System</h1>
 <a href="#" (click) = "newUser()">New User</a>
+
 <div class="main">
    <div class="users">
-      <app-users (updateUser) = "updateUser($event)"></app-users>
+      <app-users (updateUser) = "updateUser($event)"
+      ></app-users>
    </div>
    <div class="userDetail" *ngIf="showForm"> <!--// 24.1Andiamo su app.component.html e mettiamo alcune class per i css e aggiungiamo anche userDetail-->
                                                  <!--abbiamo visto che lo userdetails si troverà direttamente nell ‘app.component.html. E vediamo che abbiamo la app-user-detail e la app-users. -->
     <app-user-detail [user] = "userSelected">       
    </app-user-detail>
    </div>
-
+</div>
