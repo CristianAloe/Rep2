@@ -9,7 +9,23 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { FormsModule } from '@angular/forms';
 import{FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { NavComponent } from './nav/nav.component';
+import{RouterModule, Routes} from '@angular/router';
 
+const routes: Routes = [
+  {
+    path:'users',   
+    component: UsersComponent 
+    },
+    {
+      path:'',
+      redirectTo: 'users',  //39.2 significa che quando vedono la barra si deve andare su usersComponent
+      pathMatch:'full' //39.1 vuol dire che deve coincidere perfettamente
+      },
+    {
+    path:'users/new',
+    component: UserComponent  
+    }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +37,9 @@ import { NavComponent } from './nav/nav.component';
   imports: [
     BrowserModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule.forRoot(routes) //39.3 Dobbiamo dire se queste sono rotte prinncipali dell'app oppiure elenco di rote al di  sotto delle rotte
+    
   ],
   providers: [UserService],//17.5)Ma questa dipendenza non sa da dove iniettarla e quindi dobbiamo andare su app.module.ts  e dobbiamo metterlo sulla voce “providers” per dirgli da dove deve essere iniettato il servizio.
   bootstrap: [AppComponent]
