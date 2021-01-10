@@ -1,5 +1,8 @@
+<app-nav (onNewUser)="newUser()"></app-nav> <!--37.2 Qui dall'html di app.component ascolto l'evento onNewUser (ovvero quello che abbiamo messo come @output in nav-component.ts)
+                                             e quando viene emsso questo evento (onNewUser) chiamiamo il metodo newUser() dell'app.component.ts che fa la crezione dell'utente-->
+
 <h1>User Magement System</h1>
-<a href="#" (click) = "newUser()">New User</a>
+
 
 <div class="main">
    <div class="users">
