@@ -17,13 +17,17 @@ const routes: Routes = [
     component: UsersComponent 
     },
     {
-      path:'',
+      path:'', //nel caso di path vuoto vogliamo che venga reindirizzato in users
       redirectTo: 'users',  //39.2 significa che quando vedono la barra si deve andare su usersComponent
       pathMatch:'full' //39.1 vuol dire che deve coincidere perfettamente
       },
     {
     path:'users/new',
-    component: UserComponent  
+    component: UserDetailComponent  
+    },
+    {
+    path:'users/:id/edit',
+    component: UserDetailComponent  
     }
 ]
 @NgModule({

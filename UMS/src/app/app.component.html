@@ -1,17 +1,12 @@
-<app-nav (onNewUser)="newUser()"></app-nav> <!--37.2 Qui dall'html di app.component ascolto l'evento onNewUser (ovvero quello che abbiamo messo come @output in nav-component.ts)
-                                             e quando viene emsso questo evento (onNewUser) chiamiamo il metodo newUser() dell'app.component.ts che fa la crezione dell'utente-->
+<app-nav></app-nav> 
+<div class="container">
 
 <h1>User Magement System</h1>
 
 
-<div class="main">
-   <div class="users">
-      <app-users (updateUser) = "updateUser($event)"
-      ></app-users>
+<div class = "row">
+   <div class = "col-12">
+    <router-outlet></router-outlet>
    </div>
-   <div class="userDetail" *ngIf="showForm"> <!--// 24.1Andiamo su app.component.html e mettiamo alcune class per i css e aggiungiamo anche userDetail-->
-                                                 <!--abbiamo visto che lo userdetails si troverà direttamente nell ‘app.component.html. E vediamo che abbiamo la app-user-detail e la app-users. -->
-    <app-user-detail [user] = "userSelected">       
-   </app-user-detail>
-   </div>
+</div>
 </div>
