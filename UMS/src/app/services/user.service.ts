@@ -50,7 +50,7 @@ export class UserService { //17.1 creo questa classe UserService
     }
 
     getUser(id: number): User{
-        return this.users[id]
+        return this.users.find( user => user.id === id);
 }
 
     deleteUser(user){ ////22.4 Mentre aggiungo un nuovo metodo deleteUser(user) ovveor che riceve un utente e poi ci cancella con il metodo splice. Il metodo splice necesita della posizione dell’utente che vogliamo eliminare e quanti elementi vogliamo eliminare (in questo caso solo 1) . Quindi per trovare l’indice  facciamo let index = this.users.indexOf(user); In questo caso diciamo che vogliamo eliminare solo un utente a partire da quella posizione

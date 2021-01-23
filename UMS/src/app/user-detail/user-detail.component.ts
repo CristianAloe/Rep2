@@ -27,6 +27,7 @@ get user(){
     this.user = new User();
     this.route.params.subscribe( // significa abbonarsi a questo servizio
       (params) => {
+        alert(params.id)
         this.user = this.userService.getUser(+params.id);
       }
       );

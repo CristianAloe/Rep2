@@ -4,6 +4,7 @@ import { UserService } from '../services/user.service';//23.1 possiamo fare poss
 //23.2 Veidiamo che c’è stato che il riferimento dell’import è cambiato in user.component.ts
 
 import { faPencilAlt, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class UserComponent implements OnInit { //19.1 è stato creato questo com
 @Output() onSelectUser = new EventEmitter();
 faPen = faPencilAlt;
 faTrash= faTrash;
-constructor(private userService: UserService) { } //22.1 Dobbiamo cancellare gli utenti cancellandoli dall’array . Però vogliamo farlo direttamente con il componente user. Però devo iniettare a questo componente user  il servizio service. Quindi metto la dipendenza nel costruttore in questo modo
+constructor(private userService: UserService, private route: Router) { } //22.1 Dobbiamo cancellare gli utenti cancellandoli dall’array . Però vogliamo farlo direttamente con il componente user. Però devo iniettare a questo componente user  il servizio service. Quindi metto la dipendenza nel costruttore in questo modo
 
   ngOnInit() {
   }
@@ -28,6 +29,7 @@ constructor(private userService: UserService) { } //22.1 Dobbiamo cancellare gli
 
   }
   updateUser(){
+    this.route.navigate(['users', this.user.id, 'edit']);
      this.onSelectUser.emit(this.user)
   }
 }

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import{FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { NavComponent } from './nav/nav.component';
 import{RouterModule, Routes} from '@angular/router';
+import { UserDataComponent } from './user-data/user-data.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,11 @@ const routes: Routes = [
     {
     path:'users/:id/edit',
     component: UserDetailComponent  
-    }
+    },
+    {
+      path:'users/:id',
+      component: UserDataComponent  
+      }
 ]
 @NgModule({
   declarations: [
@@ -36,7 +41,8 @@ const routes: Routes = [
     UsersComponent,
     UserComponent,
     UserDetailComponent,
-    NavComponent
+    NavComponent,
+    UserDataComponent
   ],
   imports: [
     BrowserModule,
